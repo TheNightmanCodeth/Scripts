@@ -1,19 +1,47 @@
 #!/bin/bash
 
-## Lemonbar
-cp /usr/bin/bar ./lemonbar
 
-## i3
-cp -r ${HOME}/.config/i3/ ./i3
+## If the first arg is 'install' install the dots...
+if [[ "$1" == *"install"* ]]; then
+	## Make sure user is root
+	if [[ "$(id -u)" != "0" ]]; then
+		echo "Must be root to install dots!!" 1>&2
+		exit 1
+	fi
 
-## wal-set
-cp /usr/bin/wal-set ./wal-set
+	## Lemonbar
+	cp ./lemonbar /usr/bin/bar
 
-## wal
-cp /usr/bin/wal ./wal
+	## i3
+	cp -r ./i3 ${HOME}/.config/i3/
 
-## Xresources
-cp ${HOME}/.Xresources ./.Xresources
+	## wal-set
+	cp ./wal-set /usr/bin/wal-set
 
-## Xdefaults
-cp ${HOME}/.Xdefaults ./.Xdefaults
+	## wal
+	cp ./wal /usr/bin/wal
+
+	## Xresources
+	cp ./.Xresources ${HOME}/.Xresources
+
+	## Xdefaults
+	cp ./.Xdefaults ${HOME}/.Xdefaults
+else
+	## Lemonbar
+	cp /usr/bin/bar ./lemonbar
+	
+	## i3
+	cp -r ${HOME}/.config/i3/ ./i3
+	
+	## wal-set
+	cp /usr/bin/wal-set ./wal-set
+	
+	## wal
+	cp /usr/bin/wal ./wal
+
+	## Xresources
+	cp ${HOME}/.Xresources ./.Xresources
+
+	## Xdefaults
+	cp ${HOME}/.Xdefaults ./.Xdefaults
+fi
