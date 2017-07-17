@@ -13,7 +13,7 @@ if [[ "$1" == *"install"* ]]; then
 	cp ./lemonbar /usr/bin/bar
 
 	## i3
-	cp -r ./i3 ${HOME}/.config/i3/
+	cp -rf ./i3 ${HOME}/.config/i3/
 
 	## wal-set
 	cp ./wal-set /usr/bin/wal-set
@@ -31,7 +31,7 @@ else
 	cp /usr/bin/bar ./lemonbar
 	
 	## i3
-	cp -r ${HOME}/.config/i3/ ./i3
+	cp -rf ${HOME}/.config/i3 ./
 	
 	## wal-set
 	cp /usr/bin/wal-set ./wal-set
