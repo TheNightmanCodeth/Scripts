@@ -1,0 +1,18 @@
+utohint: 0
+Xft.antialias: 1
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+
+! Disable scrollbar
+URxvt.scrollBar: false
+! Set terminal padding
+URxvt.internalBorder: 15
+
+! Enables copy/paste with Ctrl-Shift-C/V
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+URxvt.perl-ext-common: default,clipboard
+URxvt.keysym.Control-Shift-c: perl:clipboard:copy
+URxvt.keysym.Control-Shift-v: perl:clipboard:paste

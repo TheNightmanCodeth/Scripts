@@ -1,0 +1,19 @@
+#!/bin/bash
+
+## Lemonbar
+cp /usr/bin/bar ./lemonbar
+
+## i3
+cp -r ${HOME}/.config/i3/ ./i3
+
+## wal-set
+cp /usr/bin/wal-set ./wal-set
+
+## wal
+cp /usr/bin/wal ./wal
+
+## Xresources
+cp ${HOME}/.Xresources ./.Xresources
+
+## Xdefaults
+cp ${HOME}/.Xdefaults ./.Xdefaults
